@@ -3,3 +3,4 @@ moviepy
 speechrecognition
 openai
 python-docx
+gunicorn
