@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOM's AI - Demonic Video Summarization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">DOOM's AI</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="{{ url_for('index') }}" class="cta-button">Try Now</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Videos into<br><span class="gradient-text">Demonic Summaries</span></h1>
+            <p>Harness the power of DOOM's AI to convert long videos into concise, ruthlessly accurate summaries in minutes.</p>
+            <a href="{{ url_for('index') }}" class="cta-button">Begin the Ritual <i data-feather="arrow-right"></i></a>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <i data-feather="video" class="card-icon"></i>
+                <span>Video Analysis</span>
+            </div>
+            <div class="floating-card card-2">
+                <i data-feather="cpu" class="card-icon"></i>
+                <span>Demonic Processing</span>
+            </div>
+            <div class="floating-card card-3">
+                <i data-feather="file-text" class="card-icon"></i>
+                <span>Infernal Summary</span>
+            </div>
+            <div class="sphere"></div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="features-3d-container">
+            <div class="cyber-grid"></div>
+            <div class="glow-sphere glow-sphere-1"></div>
+            <div class="glow-sphere glow-sphere-2"></div>
+        </div>
+        <h2>Why Choose DOOM's AI?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i data-feather="clock" class="feature-icon"></i>
+                <h3>Time Bending Speed</h3>
+                <p>Harness the power of DOOM's AI to compress hours of content into minutes of pure essence</p>
+            </div>
+            <div class="feature-card">
+                <i data-feather="target" class="feature-icon"></i>
+                <h3>Demonic Accuracy</h3>
+                <p>Our AI core ensures ruthlessly precise and relevant summaries every time</p>
+            </div>
+            <div class="feature-card">
+                <i data-feather="shield" class="feature-icon"></i>
+                <h3>Fortress Security</h3>
+                <p>Your content is protected by impenetrable security measures</p>
+            </div>
+            <div class="feature-card">
+                <i data-feather="download" class="feature-icon"></i>
+                <h3>Instant Arsenal</h3>
+                <p>Export your summaries in multiple formats with a single click</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <h2>The Ritual Process</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload Video</h3>
+                <p>Begin the ritual with any video up to 500MB</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Demonic Processing</h3>
+                <p>Our AI core analyzes and extracts the essence</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Receive Summary</h3>
+                <p>Obtain your infernally accurate summary</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">DOOM's AI</div>
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="{{ url_for('index') }}">Try Now</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DOOM's AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

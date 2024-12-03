@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <h1>Processing Your Video</h1>
+    <p>Estimated time: {{ estimated_time }} seconds</p>
+    <p>Please do not close this page.</p>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <form action="/process" method="post">
+        <input type="hidden" name="video_name" value="{{ video_name }}">
+        <label>
+            <input type="radio" name="format" value="markdown" required> Markdown
+        </label>
+        <label>
+            <input type="radio" name="format" value="word" required> Document
+        </label>
+        <button type="submit">Generate Summary</button>
+    </form>
+</body>
+</html>

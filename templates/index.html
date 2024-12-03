@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI Video Summarizer</h1>
+            <p>Upload your video and get an intelligent summary in minutes</p>
+        </div>
+
+        <div class="upload-section" id="dropZone">
+            <i data-feather="upload-cloud" class="upload-icon"></i>
+            <p>Drag and drop your video here or</p>
+            <input type="file" id="fileInput" class="file-input" accept="video/*">
+            <button class="button" onclick="document.getElementById('fileInput').click()">
+                Choose File
+            </button>
+            <p class="mt-2 text-sm text-gray-500">Supported formats: MP4, AVI, MOV (Max 500MB)</p>
+        </div>
+
+        <div id="formatOptions" class="format-options">
+            <h2>Choose Output Format</h2>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="markdown" name="format" value="markdown">
+                    <label for="markdown">Markdown</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="word" name="format" value="word">
+                    <label for="word">Word Document</label>
+                </div>
+            </div>
+            <button id="generateBtn" class="button" disabled>Generate Summary</button>
+        </div>
+
+        <div id="progressContainer" class="progress-container">
+            <p>Processing your video...</p>
+            <div class="progress-bar">
+                <div id="progressBarFill" class="progress-bar-fill"></div>
+            </div>
+            <p id="timeRemaining"></p>
+        </div>
+
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+            <p>Generating your summary...</p>
+            <p id="timer"></p>
+        </div>
+
+        <div id="statusMessage" class="status-message" style="display: none;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

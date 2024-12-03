@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Summary Generated!</h1>
+    <a href="{{ url_for('download_file', filename=file_path) }}" download>Click here to download</a>
+</body>
+</html>
